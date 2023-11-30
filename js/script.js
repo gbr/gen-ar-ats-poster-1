@@ -82,10 +82,7 @@ function mouseClicked() {
 var canvas;
 
 function setup() {
-  let cnv = createCanvas(895, 1280);
-  cnv.parent("canvas-ar"); // Attach the p5.js canvas to the HTML canvas element
-
-  // Optionally set pixel density to 1 for better performance, particularly on high PPI mobile devices
+  createCanvas(895, 1280, document.getElementById("canvas-ar"));
   pixelDensity(1);
   colorMode(HSB);
   angleMode(DEGREES);

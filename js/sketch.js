@@ -100,6 +100,13 @@ function setup() {
   //   song.play();
   // });
 
+  document.getElementById("playButton").addEventListener("click", function () {
+    if (getAudioContext().state !== "running") {
+      getAudioContext().resume();
+    }
+    song.play();
+  });
+
   fft = new p5.FFT(0.9, 256);
   analyzer.setInput(song);
 }

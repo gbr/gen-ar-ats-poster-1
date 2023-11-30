@@ -62,6 +62,10 @@ intensity = 0;
 //   }
 // }
 
+function preload() {
+  song = loadSound("data/ligeti-1-cut-1.mp3");
+}
+
 function mouseClicked() {
   if (song.isPlaying()) {
     song.pause();
@@ -104,11 +108,12 @@ function setup() {
 
   // Function to handle play action
   function handlePlay() {
-    if (getAudioContext().state !== "running") {
+    if (song.isLoaded() && getAudioContext().state !== "running") {
       getAudioContext().resume();
+      song.play();
+    } else {
+      console.log("Song not loaded yet");
     }
-    song.play();
-    playButton.style.display = "none"; // Optionally hide the button after playing
   }
 
   // Add event listeners for both click and touch events

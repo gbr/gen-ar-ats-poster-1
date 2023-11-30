@@ -100,12 +100,20 @@ function setup() {
   //   song.play();
   // });
 
-  document.getElementById("playButton").addEventListener("click", function () {
+  var playButton = document.getElementById("playButton");
+
+  // Function to handle play action
+  function handlePlay() {
     if (getAudioContext().state !== "running") {
       getAudioContext().resume();
     }
     song.play();
-  });
+    playButton.style.display = "none"; // Optionally hide the button after playing
+  }
+
+  // Add event listeners for both click and touch events
+  playButton.addEventListener("click", handlePlay);
+  playButton.addEventListener("touchstart", handlePlay);
 
   fft = new p5.FFT(0.9, 256);
   analyzer.setInput(song);

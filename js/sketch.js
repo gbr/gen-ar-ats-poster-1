@@ -120,7 +120,7 @@ function setup() {
 
   // Desperate measures pt 1
   playButton = createButton("Play");
-  playButton.position(20, 20); // Set the position of the button
+  playButton.position(width / 2, 20); // Set the position of the button
   playButton.mousePressed(togglePlay); // Assign a function to be called on press
 }
 

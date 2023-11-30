@@ -149,29 +149,29 @@ function changeHue() {
 }
 
 //when cursor isn't on the page, it will hide the navbar, play and pause button and other stuff.
-(function () {
-  var mouseTimer = null,
-    cursorVisible = true;
+// (function () {
+//   var mouseTimer = null,
+//     cursorVisible = true;
 
-  function disappearCursor() {
-    mouseTimer = null;
-    document.body.style.cursor = "none";
-    document.getElementById("hideBody").style.opacity = 0;
-    cursorVisible = false;
-  }
+//   function disappearCursor() {
+//     mouseTimer = null;
+//     document.body.style.cursor = "none";
+//     document.getElementById("hideBody").style.opacity = 0;
+//     cursorVisible = false;
+//   }
 
-  document.onmousemove = function () {
-    if (mouseTimer) {
-      window.clearTimeout(mouseTimer);
-    }
-    if (!cursorVisible) {
-      document.body.style.cursor = "default";
-      document.getElementById("hideBody").style.opacity = 100;
-      cursorVisible = true;
-    }
-    mouseTimer = window.setTimeout(disappearCursor, 3000);
-  };
-})();
+//   document.onmousemove = function () {
+//     if (mouseTimer) {
+//       window.clearTimeout(mouseTimer);
+//     }
+//     if (!cursorVisible) {
+//       document.body.style.cursor = "default";
+//       document.getElementById("hideBody").style.opacity = 100;
+//       cursorVisible = true;
+//     }
+//     mouseTimer = window.setTimeout(disappearCursor, 3000);
+//   };
+// })();
 
 function touchStarted() {
   getAudioContext().resume();

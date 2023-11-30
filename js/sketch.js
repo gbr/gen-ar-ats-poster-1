@@ -117,6 +117,28 @@ function setup() {
 
   fft = new p5.FFT(0.9, 256);
   analyzer.setInput(song);
+
+  // Desperate measures pt 1
+  playButton = createButton("Play");
+  playButton.position(20, 20); // Set the position of the button
+  playButton.mousePressed(togglePlay); // Assign a function to be called on press
+}
+
+// Desperate measures pt 2
+function togglePlay() {
+  if (getAudioContext().state !== "running") {
+    getAudioContext().resume();
+  }
+
+  if (!isAudioPlaying) {
+    song.play();
+    isAudioPlaying = true;
+    playButton.html("Pause");
+  } else {
+    song.pause();
+    isAudioPlaying = false;
+    playButton.html("Play");
+  }
 }
 
 col.r = 125;

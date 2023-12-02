@@ -62,9 +62,9 @@ intensity = 0;
 //   }
 // }
 
-function preload() {
-  song = loadSound("data/ligeti-1-cut-1.mp3");
-}
+// function preload() {
+//   song = loadSound("data/xenakis-1-cut-1.mp3");
+// }
 
 function mouseClicked() {
   if (song.isPlaying()) {
@@ -93,7 +93,7 @@ function setup() {
 
   analyzer = new p5.Amplitude();
 
-  song = loadSound("../data/ligeti-1-cut-1.mp3");
+  song = loadSound("../data/xenakis-2-cut-1.mp3");
 
   // Bind play functionality to user interaction
   // var playButton = document.getElementById("button_play");

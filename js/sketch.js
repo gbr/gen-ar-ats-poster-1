@@ -62,9 +62,11 @@ intensity = 0;
 //   }
 // }
 
-// function preload() {
-//   song = loadSound("data/xenakis-1-cut-1.mp3");
-// }
+function preload() {
+  song = loadSound(
+    "https://github.com/gbr/gen-ar-ats-poster-1/blob/215120d79a69d3298926b922e3e64c44ff56e684/data/xenakis-2-cut-1.mp3"
+  );
+}
 
 function mouseClicked() {
   if (song.isPlaying()) {
@@ -93,9 +95,9 @@ function setup() {
 
   analyzer = new p5.Amplitude();
 
-  song = loadSound(
-    "http://gbr.github.io/gen-ar-ats-poster-1/data/xenakis-2-cut-1.mp3"
-  );
+  // song = loadSound(
+  //   "http://gbr.github.io/gen-ar-ats-poster-1/data/xenakis-2-cut-1.mp3"
+  // );
 
   // Bind play functionality to user interaction
   // var playButton = document.getElementById("button_play");

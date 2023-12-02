@@ -64,7 +64,7 @@ intensity = 0;
 
 function preload() {
   song = loadSound(
-    "https://github.com/gbr/gen-ar-ats-poster-1/blob/215120d79a69d3298926b922e3e64c44ff56e684/data/xenakis-2-cut-1.mp3"
+    "https://accd-ats-sp23.s3.us-west-1.amazonaws.com/xenakis-2-cut-1.mp3"
   );
 }
 

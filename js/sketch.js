@@ -108,7 +108,7 @@ function setup() {
   //   song.play();
   // });
 
-  var playButton = document.getElementById("playButton");
+  // var playButton = document.getElementById("playButton");
 
   // Function to handle play action
   function handlePlay() {
@@ -121,16 +121,16 @@ function setup() {
   }
 
   // Add event listeners for both click and touch events
-  playButton.addEventListener("click", handlePlay);
-  playButton.addEventListener("touchstart", handlePlay);
+  // playButton.addEventListener("click", handlePlay);
+  // playButton.addEventListener("touchstart", handlePlay);
 
   fft = new p5.FFT(0.9, 256);
   analyzer.setInput(song);
 
   // Desperate measures pt 1
-  playButton = createButton("Play");
-  playButton.position(width / 2, 20); // Set the position of the button
-  playButton.mousePressed(togglePlay); // Assign a function to be called on press
+  // playButton = createButton("Play");
+  // playButton.position(width / 2, 20); // Set the position of the button
+  // playButton.mousePressed(togglePlay); // Assign a function to be called on press
 }
 
 // Desperate measures pt 2
@@ -347,7 +347,7 @@ function mouseClicked() {
 
     // Save the canvas as a PNG file
     // The first argument is the filename, the second one is the file extension
-    saveCanvas("myCanvas", "png");
+    // saveCanvas("myCanvas", "png");
   } else {
     if (getAudioContext().state !== "running") {
       getAudioContext().resume(); // Resume the audio context if needed

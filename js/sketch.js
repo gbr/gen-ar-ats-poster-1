@@ -85,7 +85,7 @@ function mouseClicked() {
 //   mode("play");
 // });
 
-var canvas;
+// var canvas;
 
 function setup() {
   createCanvas(895, 1280, document.getElementById("canvas-ar"));
@@ -356,6 +356,6 @@ function mouseClicked() {
   }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+// }
